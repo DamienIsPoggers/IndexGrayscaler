@@ -2,6 +2,8 @@
 {
     internal class Program
     {
+        static readonly int checkSum = -1598344453;
+
         static void Main(string[] args)
         {
             Console.WriteLine("This tool overwrites files, make sure to make backups before continuing.");
@@ -87,6 +89,8 @@
                 file2.Write((byte)0);
                 file2.Write((byte)0);
             }
+
+            file2.Write(checkSum);
 
             file2.Close();
             return true;
